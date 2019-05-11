@@ -64,12 +64,13 @@ def get_wiki():
     print(keyword)
 
     options = Options()
-    # options.add_argument("--headless")
-    # options.add_argument("--disable-gpu")
-    driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),
-                              chrome_options=options)
+    options.add_argument("--headless")
+    options.add_argument("--lang=en")
+    driver = webdriver.Chrome(chrome_options=options)
 
     driver.get("https://www.google.com/")
+    english = driver.find_element_by_xpath('//a[contains(text(), "English")]')
+    english.send_keys(Keys.ENTER)
 
     q = driver.find_element_by_name("q")
     q.send_keys(keyword, Keys.ENTER)
