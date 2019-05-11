@@ -8,13 +8,15 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   }
 
 #searchBarBox {
-    height: 55px;
-    border: solid 1px #707070;
+    height: 45px;
+    border-bottom: solid 1px #707070;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
       }
+
+      
 input:focus {
     border-color: #707070;
     outline: none;
@@ -22,7 +24,7 @@ input:focus {
 
 #searchBar {
     width: 487.1px;
-    height: 35px;
+    height: 30px;
     border-radius: 18px;
     border: solid 1px #707070;
     background-color: #ffffff;
@@ -55,7 +57,7 @@ input:focus {
 
 #videoTitle {
     font-family: Roboto;
-    font-size: 65px;
+    font-size: 55px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
@@ -69,4 +71,22 @@ input:focus {
     width: 72.9vw;
     height: 62.1vh;
     background-color: #000000;
+}
+
+#video {
+    width: 85.4%;
+    height: 100%;
+}
+#wrapperOfCentralElements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#captionsDiv {
+    width: 85.4%;
+    height: 55px;
+    background-color: #e4e4e4;
+    align-self: center;
+    text-align: center;
 }
