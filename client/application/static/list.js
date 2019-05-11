@@ -1,8 +1,19 @@
-dict = localStorage.getItem("searchResults");
-console.log(JSON.parse(dict));
+id = sessionStorage.getItem("videoID");
+console.log(sessionStorage.videoID);
+postReq(id);
+document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
 
-dict = JSON.parse(dict);
-
-list1 = document.getElementById("lst1");
-console.log(dict.items[0].snippet.thumbnails.default.url);
-list1.children[0].src = dict.items[0].snippet.thumbnails.default.url;
+function postReq(ID){
+    $.ajax({
+        method: "POST",
+        url: "http://localhost:5000/subtitles",
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify({ videoID: ID}),
+        success: function(data, textStatus) {
+            console.log(data);
+            console.log(JSON.stringify(data));
+            // $.when(setData(data)).then();
+        }
+    });
+}
