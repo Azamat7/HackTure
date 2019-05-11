@@ -1,19 +1,18 @@
-id = sessionStorage.getItem("videoID");
-console.log(sessionStorage.videoID);
-postReq(id);
-document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
+dict = localStorage.getItem("searchResults");
+console.log(JSON.parse(dict));
 
-function postReq(ID){
-    $.ajax({
-        method: "POST",
-        url: "http://localhost:5000/subtitles",
-        dataType: 'json',
-        contentType: 'application/json',
-        data: JSON.stringify({ videoID: ID}),
-        success: function(data, textStatus) {
-            console.log(data);
-            console.log(JSON.stringify(data));
-            // $.when(setData(data)).then();
-        }
-    });
+dict = JSON.parse(dict);
+
+for(i = 1; i<=5;i++) {
+    list_num = "lst" + i;
+    lst = document.getElementById(list_num);
+
+    lst.children[0].src = dict.items[i-1].snippet.thumbnails.high.url;
+    lst.children[1].children[0].innerText = dict.items[i-1].snippet.title;
+    lst.children[1].children[1].innerText = dict.items[i-1].snippet.channelTitle;
+}
+
+function clickList(num) {
+    sessionStorage.setItem("videoID", dict.items[num].id.videoId);
+    location.href = "/lectureView";
 }
