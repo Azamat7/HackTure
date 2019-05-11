@@ -13,7 +13,7 @@ document.getElementById("searchInput").addEventListener("keyup", function(event)
     event.preventDefault();
     if (event.keyCode === 13) {
         postReq(document.getElementById('searchInput').value);
-        // window.location="lectureView";
+        window.location="lectureList";
   }})
 
 function getReq(){
