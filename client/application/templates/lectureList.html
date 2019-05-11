@@ -3,8 +3,7 @@
     <head>
     <title>App</title>
     <meta charset="utf-8">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
@@ -16,18 +15,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
     </head>
     <body>
-    <div id = "searchBarBox">
+    <div id = "searchBarBox" class="flexible">
         <div class="ui search">
             <div class="ui icon input">
-                <input id="searchInput" class="prompt" type="text" placeholder="Search item by name...">
-                <i class="search icon"></i>
+                <input id="searchInput" class="prompt" type="text" placeholder="Search">
+                <i id="icons" class="search icon"></i>
             </div>
         </div>
     </div>
     <hr>
-    <div id="wrapper">
+    <div id="wrapper" class="flexible">
         <div id="keyword">
             <h1 id="word">"Neural Networks"</h1>
+        </div>
+        <div id="lower" class="flexible">
+            <div id="lst1" class="flexible">
+                <img src="{{ url_for('static', filename='assets.png') }}" alt="">
+                <div class="txt" class="flexible">
+                    <h2>asdfasdf</h2>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script src="./main.js"></script> -->
