@@ -19,7 +19,8 @@ function setData(data){
 document.getElementById("searchInput").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-        postReq(document.getElementById('searchInput').value, "lectureList");
+        sessionStorage.setItem("headWord",document.getElementById('searchInput').value);
+        postReq(document.getElementById('searchInput').value, "/lectureList");
   }})
 
 function getReq(){

@@ -43,7 +43,7 @@ def get_video_list():
 
 @app.route("/subtitles", methods=["POST"])
 def get_video_subtitles():
-	
+
 	data = request.get_json()
 
 	r = requests.get(
@@ -115,7 +115,7 @@ def get_key_phrases(full_text):
 			"X-RapidAPI-Host": "aylien-text.p.rapidapi.com",
 			"X-RapidAPI-Key": "9840da312emshb785be15f2be366p1b76efjsnbca35920968f"
 	})
-	
+
 	for key in r.json()['concepts'].keys():
 		keyPhrases.append(r.json()['concepts'][key]['surfaceForms'][0]['string'])
 
@@ -127,27 +127,61 @@ def get_wiki():
     data = request.get_json()
     keyword = data["keyword"]
 
-    print(data)
-    print(keyword)
+    print(data, type(data))
+    print(keyword, type(keyword))
+    print(json.dumps({
+        "input_type": "text",
+        "input_data": keyword
+    }))
+
+    response = requests.post(
+        "https://unfound-wikitopics-v1.p.rapidapi.com/suggestion/wikitopics",
+        headers={
+            "X-RapidAPI-Host":
+                "unfound-wikitopics-v1.p.rapidapi.com",
+            "X-RapidAPI-Key":
+                "042f3fd40bmsh299a3d264e6259ep190110jsnf075030f8fec",
+            "Content-Type":
+                "application/json"
+        },
+        json={"input_type": "text",
+              "input_data": keyword}
+    )
+
+    wiki_page = response.json()["result"][0]["url"]
 
     options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--lang=en")
+    # options.add_argument("--headless")
     driver = webdriver.Chrome(chrome_options=options)
 
-    driver.get("https://www.google.com/")
-    english = driver.find_element_by_xpath('//a[contains(text(), "English")]')
-    english.send_keys(Keys.ENTER)
+    driver.get(wiki_page)
 
-    q = driver.find_element_by_name("q")
-    q.send_keys(keyword, Keys.ENTER)
+    out = driver.find_element_by_xpath(
+        '//div[contains(@class, "mw-parser-output")]')
 
-    knowledge_panel = driver.find_element_by_xpath(
-        '//div[contains(@class, "knowledge-panel")]')
+    all_ps = out.find_elements_by_xpath("./*")
 
-    code = knowledge_panel.get_attribute("innerHTML")
+    first = -1
+    last = -1
+    for i in range(len(all_ps)):
+        p = all_ps[i]
+
+        if first == -1:
+            if p.tag_name == "p" and p.get_attribute("attributes") is None:
+                first = i
+        else:
+            if p.tag_name == "h2":
+                break
+            elif p.tag_name not in ["style", "div"]:
+                last = i
+
+    code = ""
+    for i in range(first, last + 1):
+        code += all_ps[i].get_attribute("outerHTML")
+
     print(code)
 
+    driver.close()
     return code
 
 

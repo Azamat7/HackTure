@@ -26,22 +26,25 @@ hr { background-color: #707070; opacity: 0.38; margin: 0px;}
 #lower > div {
     margin-bottom: 2.8vh;
 }
-#lower > div > a > div {
+#lower > div > div {
     width: 54.2vw;
     height: 19.6vh;
     box-shadow: 0 4px 8px 0 #000000;
     background-color: #262626b7;
     border-radius: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-#lower > div > a > div > img {
+#lower > div > div > img {
+    height: 19.6vh;
     width: 27.1%;
 }
-#lower > div > a > div > div {
+#lower > div > div > div {
     width: calc(54.2vw - 27.1%);
-    padding: 4px;
+    padding: 10px;
 }
 #lower h2 {
-    margin: 0 0 4px 0;
+    margin: 0 0 2px 0;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -50,27 +53,30 @@ hr { background-color: #707070; opacity: 0.38; margin: 0px;}
     letter-spacing: normal;
     text-align: left;
     color: #e4e4e4;
+    font-family: 'Roboto';
 }
 #lower h3 {
-    margin: 0 0 7px 0;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.35;
-    letter-spacing: normal;
-    text-align: left;
-    font-size: 16px;
-    color: #e4e4e4;
-}
-#lower p {
-    font-size: 15px;
+    margin: 0 0 15px 0;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.35;
     letter-spacing: normal;
     text-align: left;
-    color: #e4e4e4;
+    font-size: 16px;
+    color: #e2e2e2;
+    font-family: 'SegoeUI';
+}
+#lower p {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #cacaca;
+    font-family: 'SegoeUI';
 }
 h2 {
     color: white;
@@ -106,7 +112,7 @@ input:focus {
     width: 487.1px;
     height: 35px;
     border-radius: 18px;
-    border: solid 1px #707070;
+    border-: solid 1px #707070;
     background-color: #ffffff;
 }
 #searchInput {

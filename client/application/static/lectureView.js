@@ -5,6 +5,11 @@ index = 1
 prevTime = "00:00"
 prevCaption = ""
 //postReq(id);
+document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
+id = sessionStorage.getItem("videoID");
+console.log(sessionStorage.videoID);
+postReq(id);
+document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
 
 function postReq(ID,target){
     $.ajax({
