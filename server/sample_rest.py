@@ -16,9 +16,16 @@ CORS(app)
 api = Api(app)
 
 
+<<<<<<< HEAD
 @app.route("/query?q=<string:q>", methods=["GET", "POST"])
 def get_video_list(q):
     print(q)
+=======
+@app.route("/", methods=["POST"])
+def get_video_list():
+    data = request.get_json()
+    print(data)
+>>>>>>> 9eb85c0d1c845cdfca884090e75928f29ad135a4
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
     api_service_name = "youtube"
@@ -30,7 +37,11 @@ def get_video_list(q):
 
     query = youtube.search().list(
         part="snippet",
+<<<<<<< HEAD
         q=q["q"]
+=======
+        q=data["query"]
+>>>>>>> 9eb85c0d1c845cdfca884090e75928f29ad135a4
     )
 
     response = query.execute()

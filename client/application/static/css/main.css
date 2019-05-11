@@ -11,12 +11,6 @@ html {
   width: 100vw;
 }
 
-h1 {
-  font-size: 20px;
-  font-family: Helvetica;
-  color: darkolivegreen;
-}
-
 h2 {
   font-size: 50px;
 }
@@ -43,6 +37,18 @@ footer {
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+}
+
+#container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  height: 100vh;
+}
+#container1 h1 {
+  color: white;
 }
 
 .parallax {
