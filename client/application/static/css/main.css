@@ -64,7 +64,9 @@ footer {
 }
 
 #container1 {
+  height: 100vh;
   display: flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
