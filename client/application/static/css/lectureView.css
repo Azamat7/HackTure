@@ -1,15 +1,16 @@
 body {
     background-color: #141414;
+    margin: 0 0;
 }
 
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder {
     font-family: Roboto;
     font-size: 22px;
-  }
+}
+hr { background-color: #707070; opacity: 0.38; margin: 0px;}
 
 #searchBarBox {
     height: 55px;
-    border: solid 1px #707070;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,14 +25,9 @@ input:focus {
     width: 487.1px;
     height: 35px;
     border-radius: 18px;
-    border: solid 1px #707070;
+    border-: solid 1px #707070;
     background-color: #ffffff;
 }
-
-/* #searchBarTextField {
-    background-color: #ffffff;
-} */
-
 #searchInput {
     text-align:center;
     width: 487.1px;
@@ -55,7 +51,7 @@ input:focus {
 
 #videoTitle {
     font-family: Roboto;
-    font-size: 65px;
+    font-size: 55px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
@@ -69,4 +65,50 @@ input:focus {
     width: 72.9vw;
     height: 62.1vh;
     background-color: #000000;
+}
+
+#video {
+    width: 85.4%;
+    height: 100%;
+}
+#wrapperOfCentralElements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#leftDots {
+    align-self: flex-start;
+}
+
+#rightDots {
+    align-self: flex-end;
+}
+#captionsDiv {
+    width: calc(72.9vw * 0.854);
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#subtitles {
+    flex-direction: row;
+    width: 85.4vw;
+    align-self: center;
+    margin:  0 0;
+}
+
+#time {
+    font-family: Roboto;
+    font-size: 22px;
+    color: #e4e4e4;
+}
+
+#caption {
+    font-family: Roboto;
+    font-size: 22px;
+    color: #e4e4e4;
 }

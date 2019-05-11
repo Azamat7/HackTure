@@ -10,31 +10,41 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/lectureView.css') }}">
+    <link rel="stylesheet" href="/static/css/lectureView.css">
     <!-- <link href="./itemcss.css" rel="stylesheet" > -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+    <script>window.jQuery || document.write('<script src="/static/jquery.js">\x3C/script>')</script>
   </head>
   <body>
-      <div id = "searchBarBox">
-            <div class="ui search">
-                <div class="ui icon input" id = "searchBarTextField">
-                    <input id="searchInput" class="prompt" type="text" placeholder="Search">
-                    <i id="icons" class="search icon"></i>
+        <div id = "searchBarBox" class="flexible">
+                <div class="ui search">
+                    <div class="ui icon input">
+                        <input id="searchInput" class="prompt" type="text" placeholder="Search">
+                        <i id="icons" class="search icon"></i>
+                    </div>
                 </div>
-                </div>
-          </div>
-
-          <div id = "lowerWrapper">
-              <div id = "wrapperOfCentralElements">
-            <span id = "videoTitle">Video name</span>
-            <div id = "boundingBoxOfVideo">
-            
             </div>
+            <hr>
+            <div id = "lowerWrapper">
+              <div id = "wrapperOfCentralElements">
+                <span id = "videoTitle">Video name</span>
+                <div id = "boundingBoxOfVideo">
+                    <iframe id = "video"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+                <div id = "captionsDiv">
+                    <img id = "leftDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
+                    <div id = "subtitles">
+                        <div id="time"> 10:52 </div>
+                        <div id="caption"> This is the process that is called convolution </div>
+                    </div>
+                    <img id = "rightDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
+                </div>
             </div>
           </div>
     <!-- <script src="./main.js"></script> -->
-    <script src="{{url_for('static', filename='lectureView.js')}}"></script>
+    <script src="/static/lectureView.js"></script>
   </body>
 
 </html>
