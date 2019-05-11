@@ -12,13 +12,13 @@ import requests
 
 app = Flask(__name__)
 CORS(app)
+
 api = Api(app)
 
 
-@app.route("/", methods=["POST"])
+@app.route("/videos", methods=["POST"])
 def get_video_list():
     data = request.get_json()
-    print(data)
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
     api_service_name = "youtube"
@@ -35,18 +35,26 @@ def get_video_list():
 
     response = query.execute()
 
+    # print(data)
+    # print(json.dumps(response))
+
     return json.dumps(response)
 
 
-@app.route("/subtitles", methods=["GET"])
+@app.route("/subtitles", methods=["POST"])
 def get_video_subtitles():
-    q = request.get_json()
-    print("request.get_json() =", q)
+    data = request.get_json()
 
-    r = requests.get("https://subtitles-for-youtube.p.rapidapi.com/subtitles/%s?translated=None&type=None" % q["videoID"],
+    # print(data["videoID"])
+
+    r = requests.get(f"https://subtitles-for-youtube.p.rapidapi.com/subtitles/{data['videoID']}?translated=None&type=None",
                      headers={"X-RapidAPI-Host": "subtitles-for-youtube.p.rapidapi.com",
                               "X-RapidAPI-Key": "042f3fd40bmsh299a3d264e6259ep190110jsnf075030f8fec"})
-    return r.json()
+
+    # print(data)
+    # print(r.json())
+
+    return json.dumps(r.json())
 
 
 if __name__ == '__main__':
