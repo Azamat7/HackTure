@@ -13,6 +13,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
     </head>
     <body>
     <div id = "searchBarBox" class="flexible">
@@ -29,17 +30,50 @@
             <h1 id="word">"Neural Networks"</h1>
         </div>
         <div id="lower" class="flexible">
-            <div><a href="./lectureView"><div id="lst1" class="flexible">
-                <img src="{{ url_for('static', filename='assets.png') }}" alt="">
+            <div><div id="lst1" class="flexible" onclick="clickList(0);">
+                <img src="" alt="">
                 <div class="txt" class="flexible">
                     <h2>Neural Networks Explained - Machine Learning Tutorial for Beginners</h2>
                     <h3>LearnCode.acardemy</h3>
                     <p>If you know nothing about how a neural network works, this is the video for you!  I've worked for weeks to find ways to explain this in a way that is easy to understand for beginners.</p>
                 </div>
-            </div></a></div>
+            </div></div>
+            <div><div id="lst2" class="flexible" onclick="clickList(1);">
+                <img src="" alt="">
+                <div class="txt" class="flexible">
+                    <h2>Neural Networks Explained - Machine Learning Tutorial for Beginners</h2>
+                    <h3>LearnCode.acardemy</h3>
+                    <p>If you know nothing about how a neural network works, this is the video for you!  I've worked for weeks to find ways to explain this in a way that is easy to understand for beginners.</p>
+                </div>
+            </div></div>
+            <div><div id="lst3" class="flexible" onclick="clickList(2);">
+                <img src="" alt="">
+                <div class="txt" class="flexible">
+                    <h2>Neural Networks Explained - Machine Learning Tutorial for Beginners</h2>
+                    <h3>LearnCode.acardemy</h3>
+                    <p>If you know nothing about how a neural network works, this is the video for you!  I've worked for weeks to find ways to explain this in a way that is easy to understand for beginners.</p>
+                </div>
+            </div></div>
+            <div><div id="lst4" class="flexible" onclick="clickList(3);">
+                <img src="" alt="">
+                <div class="txt" class="flexible">
+                    <h2>Neural Networks Explained - Machine Learning Tutorial for Beginners</h2>
+                    <h3>LearnCode.acardemy</h3>
+                    <p>If you know nothing about how a neural network works, this is the video for you!  I've worked for weeks to find ways to explain this in a way that is easy to understand for beginners.</p>
+                </div>
+            </div></div>
+            <div><div id="lst5" class="flexible" onclick="clickList(4);">
+                <img src="" alt="">
+                <div class="txt" class="flexible">
+                    <h2>Neural Networks Explained - Machine Learning Tutorial for Beginners</h2>
+                    <h3>LearnCode.acardemy</h3>
+                    <p>If you know nothing about how a neural network works, this is the video for you!  I've worked for weeks to find ways to explain this in a way that is easy to understand for beginners.</p>
+                </div>
+            </div></div>
         </div>
     </div>
     <!-- <script src="./main.js"></script> -->
+    <script src="{{url_for('static', filename='main.js')}}"></script>
     <script src="{{url_for('static', filename='list.js')}}"></script>
     </body>
 </html>

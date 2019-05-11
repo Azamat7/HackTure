@@ -1,4 +1,5 @@
 id = sessionStorage.getItem("videoID");
+console.log(sessionStorage.videoID);
 postReq(id);
 document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
 
