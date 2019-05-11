@@ -2,7 +2,7 @@
 function postReq(searchQuery, nextPage){
     $.ajax({
         method: "POST",
-        url: "http://localhost:5000",
+        url: "http://localhost:5000/videos",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({ query: searchQuery }),
@@ -13,7 +13,7 @@ function postReq(searchQuery, nextPage){
 }
 
 function setData(data){
-    sessionStorage.setItem("queryResults", data); 
+    localStorage.setItem("searchResults", JSON.stringify(data)); 
 }
 
 document.getElementById("searchInput").addEventListener("keyup", function(event) {

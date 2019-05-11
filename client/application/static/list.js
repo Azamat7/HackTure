@@ -1,1 +1,2 @@
-console.log(localStorage.getItem("searchResults"))
+dict = localStorage.getItem("searchResults");
+console.log(JSON.parse(dict));
