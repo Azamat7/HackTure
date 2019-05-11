@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Lecture View</title>
+    <head>
+    <title>App</title>
     <meta charset="utf-8">
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Pacifico">
+        href="https://fonts.googleapis.com/css?family=Pacifico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/lectureView.css') }}">
     <!-- <link href="./itemcss.css" rel="stylesheet" > -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
-  </head>
-  <body>
-      <div id = "searchBarBox">
-            <div class="ui search">
-                <div class="ui icon input" id = "searchBarTextField">
-                    <input id="searchInput" class="prompt" type="text" placeholder="Search">
-                    <i id="icons" class="search icon"></i>
-                </div>
-                </div>
-          </div>
-
-          <div id = "lowerWrapper">
-              <div id = "wrapperOfCentralElements">
-            <span id = "videoTitle">Video name</span>
-            <div id = "boundingBoxOfVideo">
-            
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+    </head>
+    <body>
+    <div id = "searchBarBox">
+        <div class="ui search">
+            <div class="ui icon input">
+                <input id="searchInput" class="prompt" type="text" placeholder="Search item by name...">
+                <i class="search icon"></i>
             </div>
-            </div>
-          </div>
+        </div>
+    </div>
+    <hr>
+    <div id="wrapper">
+        <div id="keyword">
+            <h1 id="word">"Neural Networks"</h1>
+        </div>
+    </div>
     <!-- <script src="./main.js"></script> -->
-    <script src="{{url_for('static', filename='lectureView.js')}}"></script>
-  </body>
-
+    <script src="{{url_for('static', filename='list.js')}}"></script>
+    </body>
 </html>
+    
+    
+    
+    
+    
+    
+    

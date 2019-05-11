@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    width: 100vw;
+    color: #e4e4e4;
+}
+#searchBarBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px 0px;
+}
+hr { background-color: #707070; opacity: 0.38; margin: 0px;}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 48px;
+}
+#word { 
+    text-decoration: underline; 
+    text-decoration-color: #48eb94; 
+    text-underline-position: under;
+
+    font-size: 33.5px;
+}

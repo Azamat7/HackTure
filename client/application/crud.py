@@ -15,6 +15,10 @@ def main():
 def lectureView():
     return render_template("lectureView.html")
 
+@crud.route("/lectureList")
+def lectureList():
+    return render_template("lectureList.html")
+
 
 # Sample code for referenece
 # @crud.route('/<id>/edit', methods=['GET', 'POST'])
