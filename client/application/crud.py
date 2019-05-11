@@ -11,6 +11,10 @@ def main():
     #return r.json()['hello']
     return render_template("base.html")
 
+@crud.route("/lectureView")
+def lectureView():
+    return render_template("lectureView.html")
+
 
 # Sample code for referenece
 # @crud.route('/<id>/edit', methods=['GET', 'POST'])
