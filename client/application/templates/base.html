@@ -31,12 +31,14 @@
     <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
   </head>
   <body>
+    <!-- <button onclick="window.location = 'lectureView'">Click</button> -->
+
     <div id="container1">
       <h1>Learn in HACKTURE</h1>
       <div id = "searchBarBox">
           <div class="ui search">
             <div class="ui icon input">
-              <input id="srch" class="prompt" type="text" placeholder="Search item by name...">
+              <input id="srch" class="prompt" type="text" onkeypress="keyDownEvent(event);" placeholder="Search item by name...">
               <i class="search icon"></i>
             </div>
           </div>

@@ -12,7 +12,6 @@ import requests
 
 app = Flask(__name__)
 CORS(app)
-
 api = Api(app)
 
 
