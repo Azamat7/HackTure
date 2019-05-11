@@ -25,7 +25,7 @@ input:focus {
     width: 487.1px;
     height: 35px;
     border-radius: 18px;
-    border-: solid 1px #707070;
+    border: solid 1px #707070;
     background-color: #ffffff;
 }
 #searchInput {
@@ -111,4 +111,8 @@ input:focus {
     font-family: Roboto;
     font-size: 22px;
     color: #e4e4e4;
+}
+
+#wikiContents {
+    width: 27%;
 }
