@@ -14,6 +14,7 @@
     <!-- <link href="./itemcss.css" rel="stylesheet" > -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/jquery.js">\x3C/script>')</script>
+    <!-- <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
   </head>
   <body>
         <div id = "searchBarBox" class="flexible">
@@ -29,15 +30,17 @@
               <div id = "wrapperOfCentralElements">
                 <span id = "videoTitle">Video name</span>
                 <div id = "boundingBoxOfVideo">
-                    <iframe id = "video"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe>
+                    
+                    <div id="player"></div>
+
                 </div>
                 <div id = "captionsDiv">
                     <img id = "leftDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
                     <div id = "subtitles">
-                        <div id="time"> 10:52 </div>
-                        <div id="caption"> This is the process that is called convolution </div>
+                        <div id="time1"> 00:00 </div>
+                        <div id="caption1"> </div>
+                        <div id="time2"> 00:00 </div>
+                        <div id="caption2">  </div>
                     </div>
                     <img id = "rightDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
                 </div>
