@@ -1,0 +1,18 @@
+body {
+    background-color: #141414;
+}
+
+#searchBarBox {
+    height: 55px;
+    opacity: 0.38;
+    border: solid 1px #707070;
+      }
+
+#searchBar {
+    width: 487.1px;
+    height: 35px;
+    opacity: 0.09;
+    border-radius: 18px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
