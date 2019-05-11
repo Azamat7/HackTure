@@ -92,109 +92,39 @@ footer {
     z-index: 2;
 }
 
-#bio {
-  margin-left: 100px;
+input::placeholder {
+  font-family: Roboto;
+  font-size: 22px;
+}
+hr { background-color: #707070; opacity: 0.38; margin: 0px;}
+
+#searchBarBox {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    }
+input:focus {
+  border-color: #707070;
+  outline: none;
 }
 
-#resume {
-  margin-left: 100px;
+#searchBar {
+  width: 487.1px;
+  height: 35px;
+  border-radius: 18px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
 }
-
-#projects {
-  margin-left: 100px;
+#searchInput {
+  text-align:center;
+  width: 487.1px;
+  height: 35px;
+  border-radius: 18px;
+  background-color: #2e2e2e;
+  color: #e4e4e4;
 }
-
-#fun {
-  margin-left: 100px;
+#icons {
+  filter: invert(1);
 }
-
-.update {
-  color: black;
-}
-
-.fa {
-  padding: 10px;
-  font-size: 20px;
-  width: 40px;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-github {
-  background: #000000;
-  color: white;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.niceties {
-  height: 100%; width: 100%;
-  display: inline-block;
-  float: left;
-  overflow-x: hidden;
-  position: relative; 
-  background-color: #fff;
-}
-
-.half {
-  width: 50%;
-  float: left;
-  padding: 60px;
-  height: 100%;
-  position: relative;
-}
-
-.white { 
-  background-color: #fff;
-}
-
-.navy {
-  background-color: #183150;
-}
-
-.cream {
-  background-color: #ffdcb4;
-}
-
-.home {
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-  float: left;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.full {
-  width: 100%;
-  float: left;
-  padding: 60px;
-  position: relative;
-}
-
-
-
-
-
