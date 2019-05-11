@@ -20,7 +20,7 @@ document.getElementById("searchInput").addEventListener("keyup", function(event)
     event.preventDefault();
     if (event.keyCode === 13) {
         sessionStorage.setItem("headWord",document.getElementById('searchInput').value);
-        postReq(document.getElementById('searchInput').value, "lectureList");
+        postReq(document.getElementById('searchInput').value, "/lectureList");
   }})
 
 function getReq(){

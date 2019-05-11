@@ -15,5 +15,6 @@ for(i = 1; i<=5;i++) {
 
 function clickList(num) {
     sessionStorage.setItem("videoID", dict.items[num].id.videoId);
+    sessionStorage.setItem("videoTitle", dict.items[num].snippet.title)
     location.href = "/lectureView";
 }

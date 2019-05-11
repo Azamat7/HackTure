@@ -1,3 +1,4 @@
+document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
 id = sessionStorage.getItem("videoID");
 console.log(sessionStorage.videoID);
 postReq(id);
