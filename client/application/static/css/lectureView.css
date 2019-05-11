@@ -2,45 +2,58 @@ body {
     background-color: #141414;
 }
 
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: Roboto;
+    font-size: 22px;
+  }
+
 #searchBarBox {
     height: 55px;
-    opacity: 0.38;
     border: solid 1px #707070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
       }
+input:focus {
+    border-color: #707070;
+    outline: none;
+}
 
 #searchBar {
     width: 487.1px;
     height: 35px;
-    opacity: 0.09;
     border-radius: 18px;
     border: solid 1px #707070;
     background-color: #ffffff;
 }
+
+/* #searchBarTextField {
+    background-color: #ffffff;
+} */
 
 #searchInput {
     text-align:center;
     width: 487.1px;
     height: 35px;
-    opacity: 0.09;
     border-radius: 18px;
-    border: solid 1px #707070;
-    background-color: #ffffff;
+    background-color: #2e2e2e;
+    color: #e4e4e4;
+}
+#icons {
+    filter: invert(1);
 }
 
 #lowerWrapper {
-    position:absolute;
-    left:50%;
-    top:50%;
-    width:1400px;
-    height:934px;
-
-    margin-left:-700px; /* -1/2 width */
-    margin-top:-467px; /* -1/2 height */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-h1 {
-    width: 652px;
-    height: 78px;
+#videoTitle {
     font-family: Roboto;
     font-size: 65px;
     font-weight: 500;
@@ -50,4 +63,10 @@ h1 {
     letter-spacing: normal;
     text-align: left;
     color: #e4e4e4;
+}
+
+#boundingBoxOfVideo {
+    width: 72.9vw;
+    height: 62.1vh;
+    background-color: #000000;
 }
