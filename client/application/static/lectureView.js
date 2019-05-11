@@ -1,5 +1,6 @@
-// postReq(localStorage.getItem("videoID"));
-postReq("g");
+id = localStorage.getItem("videoID");
+postReq(id);
+document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
 
 function postReq(ID){
     $.ajax({
@@ -7,7 +8,7 @@ function postReq(ID){
         url: "http://localhost:5000/subtitles",
         dataType: 'json',
         contentType: 'application/json',
-        data: JSON.stringify({ videoID: "VrMHA3yX_QI"}),
+        data: JSON.stringify({ videoID: ID}),
         success: function(data, textStatus) {
             console.log(data);
             console.log(JSON.stringify(data));

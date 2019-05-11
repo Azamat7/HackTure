@@ -21,22 +21,22 @@ hr { background-color: #707070; opacity: 0.38; margin: 0px;}
 }
 #lower {
     flex-direction: column;
+    margin-bottom: 8vh;
 }
-#lower > a > div {
+#lower > div {
+    margin-bottom: 2.8vh;
+}
+#lower > div > a > div {
     width: 54.2vw;
     height: 19.6vh;
     box-shadow: 0 4px 8px 0 #000000;
     background-color: #262626b7;
     border-radius: 8px;
-    margin-bottom: 2.8vh;
 }
-#lower > a > div:last-child {
-    margin-bottom: 8vh;
-}
-#lower > a > div > img {
+#lower > div > a > div > img {
     width: 27.1%;
 }
-#lower > a > div > div {
+#lower > div > a > div > div {
     width: calc(54.2vw - 27.1%);
     padding: 4px;
 }
