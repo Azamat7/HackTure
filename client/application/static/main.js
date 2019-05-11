@@ -13,7 +13,7 @@ function postReq(searchQuery, nextPage){
 }
 
 function setData(data){
-    sessionStorage.setItem("searchResults", data); 
+    localStorage.setItem("searchResults", JSON.stringify(data)); 
 }
 
 document.getElementById("searchInput").addEventListener("keyup", function(event) {
