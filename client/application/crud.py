@@ -7,9 +7,9 @@ crud = Blueprint('crud', __name__)
 
 @crud.route("/")
 def main():
-    r = requests.get("http://localhost:5000")
+    # r = requests.get("http://localhost:5000")
     #return r.json()['hello']
-    return render_template("main.html", request=r.json()['hello'])
+    return render_template("base.html")
 
 
 # Sample code for referenece
