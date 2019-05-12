@@ -114,6 +114,9 @@ input:focus {
 }
 
 #wikiContents {
+    position: absolute;
+    right:0;
+    top:56px;
     width: 27%;
     background-color: #444444;
 }
@@ -141,6 +144,11 @@ input:focus {
     margin-left: 14px;
     color: #e4e4e4;
 }
+#xSign {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 #terminName {
     font-family: Roboto;
@@ -152,12 +160,14 @@ input:focus {
     letter-spacing: normal;
     text-align: left;
     margin-left: 25px;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     color: #48eb94;
 }
 
 #wikiVideos {
     padding-left: 20px;
+    margin-top: 20px;
 }
 
 #sectionTitle {
