@@ -14,7 +14,6 @@
     <!-- <link href="./itemcss.css" rel="stylesheet" > -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/jquery.js">\x3C/script>')</script>
-    <!-- <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
   </head>
   <body>
       <div id = "searchBarBox" class="flexible">
@@ -30,33 +29,27 @@
               <div id = "wrapperOfCentralElements">
                 <span id = "videoTitle">Video name</span>
                 <div id = "boundingBoxOfVideo">
-                    
-                    <div id="player"></div>
-
+                    <iframe id = "video"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
                 </div>
                 <div id = "captionsDiv">
                     <img id = "leftDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
                     <div id = "subtitles">
-                        <div id="time1"> 00:00 </div>
-                        <div id="caption1"> </div>
-                        <div id="time2"> 00:00 </div>
-                        <div id="caption2">  </div>
+                        <div id="time"> 10:52 </div>
+                        <div id="caption"> This is the process that is called convolution </div>
                     </div>
                     <img id = "rightDots" src="{{ url_for('static', filename='doubledot.png') }}" alt="">
                 </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div id="wikiContents" style="display: none;">
-=======
           <div id="wikiContents" style="visibility: hidden;">
->>>>>>> a6a89927c0dc2692d6a5a66800f28568f3c08f80
               <div id = "headers">
                 <div id="terminName">
                     convolution
-                </div>
-                <input type="image" id="xSign" onclick="pressX();" style="width:20px; height:20px;" src="{{ url_for('static', filename='close.png') }}" />
+                    </div>
+                    <input type="image" style="width:20px; height:20px;" src="{{ url_for('static', filename='close.png') }}" />
               </div>
                 <div id="terminBox">
                     <div id="wiki"> 
