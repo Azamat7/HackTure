@@ -1,12 +1,10 @@
 id = sessionStorage.getItem("videoID");
-//id = "VrMHA3yX_QI"
 script = null
 index = 1
 prevTime = "00:00"
 prevCaption = ""
 //postReq(id);
 document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
-postReqForVideos("deep learning");
 //id = sessionStorage.getItem("videoID");
 //console.log(sessionStorage.videoID);
 //document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
@@ -152,8 +150,6 @@ function renderResults(data1){
     myList1 = data.items;
     myList = myList1.slice(0, 5);
     var arrayLength = myList.length;
-    console.log(myList[0].id.videoId);
-    console.log(myList[0].snippet.title);
     for (var i = 0; i < arrayLength; i++) {
         var result = '<div class="item" width = "93" style = "border-radius: 14px; background-color: rgba(0,0,0,0.21);">' +
     '<div class="image" style = "border-color:transparent;">' +
@@ -175,15 +171,10 @@ function renderResults(data1){
 
 function pressHead(i){
     lst = document.getElementById("videosColl");
-    console.log(lst.children[i+1].innerText)
-    console.log(lst.children[i+1].children[1].innerText)
-    console.log(lst.children[i+1].children[1].children[0].innerText)
-    var videoId = $(this).attr('videoId');
-    var videoTitle = $(this).attr('videoTitle');
-    console.log("inside of func")
-    console.log(videoId);
-    console.log(videoTitle);
+    videoId = lst.children[i+1].children[1].children[0].getAttribute("videoID")
+    videoTitle = lst.children[i+1].children[1].children[0].getAttribute("videoTitle")
+    
     sessionStorage.setItem("videoID", videoId);
     sessionStorage.setItem("videoTitle", videoTitle);
-    // location.href = "/lectureView";
+    location.href = "/lectureView";
 };
