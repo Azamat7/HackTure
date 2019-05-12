@@ -1,15 +1,15 @@
-//id = sessionStorage.getItem("videoID");
-id = "VrMHA3yX_QI"
+id = sessionStorage.getItem("videoID");
+//id = "VrMHA3yX_QI"
 script = null
 index = 1
 prevTime = "00:00"
 prevCaption = ""
 //postReq(id);
-document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
-id = sessionStorage.getItem("videoID");
-console.log(sessionStorage.videoID);
-postReq(id);
-document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
+//document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
+//id = sessionStorage.getItem("videoID");
+//console.log(sessionStorage.videoID);
+//postReq(id);
+//document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
 
 function postReq(ID,target){
     $.ajax({
@@ -37,7 +37,6 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 function onYouTubeIframeAPIReady() {
-    console.log("YAY");
   player = new YT.Player('player', {
     height: '360',
     width: '640',
@@ -80,6 +79,8 @@ function onPlayerStateChange(event) {
                 var currCaption = script[index]['text'];
                 if (currCaption.indexOf("* *") != -1){
                     currCaption = currCaption.replace("* *", " ");
+                }else if (currCaption.indexOf("**") != -1){
+                    currCaption = currCaption.replace("**", " ");
                 }
                 while (currCaption.indexOf("*") != -1){
                     start = currCaption.indexOf("*");
@@ -111,6 +112,7 @@ function stopVideo() {
 
 
 function postReqWiki(searchQuery){
+    console.log("AAz");
     $.ajax({
         method: "POST",
         url: "http://localhost:5000/wiki",
@@ -118,7 +120,11 @@ function postReqWiki(searchQuery){
         contentType: 'application/json',
         data: JSON.stringify({ keyword: searchQuery }),
         success: function(data, textStatus) {
+            console.log("YAY");
             console.log(data);
+            document.getElementById("terminExplanation").innerHTML = data.toString();
+            document.getElementById("terminName").innerHTML = searchQuery;
+            
         }
     });
 }
