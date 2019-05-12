@@ -26,7 +26,7 @@ def get_video_list():
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyCi05vc19O6v3T49Ji-X9IAiekHbuHOpl4"
+    DEVELOPER_KEY = "AIzaSyCK9InkReUAKOxO9WwPcdPJmVW9KS09wzU"
 
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY)

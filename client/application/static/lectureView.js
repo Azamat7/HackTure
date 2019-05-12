@@ -6,6 +6,7 @@ prevTime = "00:00"
 prevCaption = ""
 //postReq(id);
 document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
+postReqForVideos("deep learning");
 //id = sessionStorage.getItem("videoID");
 //console.log(sessionStorage.videoID);
 //document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
@@ -174,9 +175,9 @@ function renderResults(data1){
 
 function pressHead(i){
     lst = document.getElementById("videosColl");
-    console.log(lst.children[0])
-    console.log(lst.children[1])
-    console.log(lst.children[2])
+    console.log(lst.children[i+1].innerText)
+    console.log(lst.children[i+1].children[1].innerText)
+    console.log(lst.children[i+1].children[1].children[0].innerText)
     var videoId = $(this).attr('videoId');
     var videoTitle = $(this).attr('videoTitle');
     console.log("inside of func")
