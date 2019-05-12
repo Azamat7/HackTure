@@ -26,7 +26,7 @@ def get_video_list():
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyD_gFdAPaLcQrozMtTmZhBSpl7Ao3QkdW8"
+    DEVELOPER_KEY = "AIzaSyCi05vc19O6v3T49Ji-X9IAiekHbuHOpl4"
 
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY)
@@ -151,7 +151,7 @@ def get_wiki():
     wiki_page = response.json()["result"][0]["url"]
 
     options = Options()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     driver = webdriver.Chrome(chrome_options=options)
 
     driver.get(wiki_page)
@@ -167,7 +167,7 @@ def get_wiki():
         p = all_ps[i]
 
         if first == -1:
-            if p.tag_name == "p" and p.get_attribute("attributes") is None:
+            if p.tag_name == "p" and p.get_attribute("class") == "":
                 first = i
         else:
             if p.tag_name == "h2":
@@ -182,7 +182,7 @@ def get_wiki():
     print(code)
 
     driver.close()
-    return code
+    return json.dumps(code)
 
 
 if __name__ == '__main__':
