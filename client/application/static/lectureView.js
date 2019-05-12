@@ -5,13 +5,10 @@ index = 1
 prevTime = "00:00"
 prevCaption = ""
 //postReq(id);
-//document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
+document.getElementById('videoTitle').innerText = sessionStorage.videoTitle;
 //id = sessionStorage.getItem("videoID");
 //console.log(sessionStorage.videoID);
-//postReq(id);
 //document.getElementById('video').src = "https://www.youtube.com/embed/" + id;
-
-postReqForVideos("Deep Learning");
 
 
 function postReq(ID,target){
@@ -120,16 +117,16 @@ function postReqWiki(searchQuery){
         contentType: 'application/json',
         data: JSON.stringify({ keyword: searchQuery }),
         success: function(data, textStatus) {
-            console.log("YAY");
-            console.log(data);
             document.getElementById("terminExplanation").innerHTML = data.toString();
             document.getElementById("terminName").innerHTML = searchQuery;
+            postReqForVideos(searchQuery);
             
         }
     });
 }
 
 function postReqForVideos(terminQuery){
+    console.log("postReqForVideos");
     $.ajax({
         method: "POST",
         url: "http://localhost:5000/videos",
