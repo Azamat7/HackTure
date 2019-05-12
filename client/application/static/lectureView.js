@@ -44,15 +44,15 @@ function renderResults(data1){
     for (var i = 0; i < arrayLength; i++) {
         var result = '<div class="item" width = "93" style = "border-radius: 14px; background-color: rgba(0,0,0,0.21);">' +
     '<div class="image" style = "border-color:transparent;">' +
-    '<img src="'+ myList[i].snippet.thumbnails.high.url + '" style = "border-radius: 14px; ">' +
+    '<img src="'+ myList[i].snippet.thumbnails.high.url + '" style = "border-radius: 14px; min-width: 100%; height: auto">' +
     '</div>' + 
     '<div class="content">' +
-    '<a class="header myClass" videoId = "'+ myList[i].id.videoId +'" videoTitle = "'+myList[i].snippet.title+'">'+ myList[i].snippet.title +'</a>' +
+    '<a style="height:30%; font-size: 1vw;" class="header" onclick="pressHead('+i+')" videoId = "'+ myList[i].id.videoId +'" videoTitle = "'+myList[i].snippet.title+'">'+ myList[i].snippet.title +'</a>' +
     '<div class="meta">' +
     '<span>'+myList[i].snippet.channelTitle+'</span>' +
     '</div>' +
     '<div class="description">' +
-    ' <p>'+myList[i].snippet.description+'</p> ' +
+    ' <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">'+myList[i].snippet.description+'</p> ' +
     '</div>' +
     '</div>' +
     '</div>'
@@ -60,8 +60,11 @@ function renderResults(data1){
     }
 }
 
-$('.myClass').on('click',function(event){
-    event.preventDefault();
+function pressHead(i){
+    lst = document.getElementById("videosColl");
+    console.log(lst.children[0])
+    console.log(lst.children[1])
+    console.log(lst.children[2])
     var videoId = $(this).attr('videoId');
     var videoTitle = $(this).attr('videoTitle');
     console.log("inside of func")
@@ -70,4 +73,4 @@ $('.myClass').on('click',function(event){
     sessionStorage.setItem("videoID", videoId);
     sessionStorage.setItem("videoTitle", videoTitle);
     // location.href = "/lectureView";
-})
+};
