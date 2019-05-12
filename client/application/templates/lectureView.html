@@ -47,12 +47,12 @@
             </div>
           </div>
 
-          <div id="wikiContents">
+          <div id="wikiContents" style="display: none;">
               <div id = "headers">
                 <div id="terminName">
                     convolution
-                    </div>
-                    <input type="image" style="width:20px; height:20px;" src="{{ url_for('static', filename='close.png') }}" />
+                </div>
+                <input type="image" id="xSign" onclick="pressX();" style="width:20px; height:20px;" src="{{ url_for('static', filename='close.png') }}" />
               </div>
                 <div id="terminBox">
                     <div id="wiki"> 

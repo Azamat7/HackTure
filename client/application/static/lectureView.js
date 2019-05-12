@@ -123,6 +123,7 @@ function postReqWiki(searchQuery){
             
         }
     });
+    document.getElementById('wikiContents').style.display = "block";
 }
 
 function postReqForVideos(terminQuery){
@@ -139,6 +140,10 @@ function postReqForVideos(terminQuery){
             // $.when(setData(data)).then(window.location = nextPage);
         }
     });
+}
+function pressX() {
+    console.log("pressX");
+    document.getElementById('wikiContents').style.display = "block";
 }
 
 function renderResults(data1){
