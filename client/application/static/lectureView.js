@@ -144,7 +144,7 @@ function postReqForVideos(terminQuery){
 }
 function pressX() {
     console.log("pressX");
-    document.getElementById('wikiContents').style.display = "block";
+    document.getElementById('wikiContents').style.display = "none";
 }
 
 function renderResults(data1){
