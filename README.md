@@ -1,2 +1,2 @@
-# YouTube_Edu
+# HackTure
 Convenient way of learning through videos
